@@ -34,15 +34,20 @@
             simple flip and swipe. Learning and mastered stay visible so you
             always know what to review next.
           </p>
-          <div class="pills">
-            <span class="pill pill-all">All</span>
-            <span class="pill pill-unseen">Unseen</span>
-            <span class="pill pill-learning">Learning</span>
-            <span class="pill pill-mastered">Mastered</span>
-          </div>
-          <div class="actions">
-            <a class="btn btn-on-teal" href="#app">See the app</a>
-            <a class="btn btn-secondary" href="./privacy/">Privacy policy</a>
+          <div class="store-cta">
+            <a
+              class="store-badge-link"
+              href="https://apps.apple.com/us/app/octo-flashcards/id1664003220"
+            >
+              <img
+                class="store-badge"
+                src="%BASE_URL%badges/download-on-the-app-store.svg"
+                alt="Download on the App Store"
+                width="144"
+                height="48"
+              />
+            </a>
+            <p class="store-caption">Available for iPad only</p>
           </div>
         </div>
         <div class="hero-visual">
@@ -127,6 +132,9 @@
         <a href="./terms/">Terms and conditions</a>
       </nav>
       <p>© <span id="y"></span> OCTO Flashcards</p>
+      <p class="legal-note">
+        Apple, the Apple logo, and App Store are trademarks of Apple Inc.
+      </p>
     </footer>
     <script>
       document.getElementById("y").textContent = new Date().getFullYear();

@@ -8,13 +8,6 @@
   --muted: #6b7380;
   --line: #e6e8ee;
   --field: #f1f3f6;
-  --learning: #e59b2d;
-  --learning-bg: #fde9cc;
-  --mastered-bg: #d7f1ec;
-  --all: #7d84d4;
-  --all-bg: #e8e9fb;
-  --unseen: #8b919c;
-  --unseen-bg: #eef0f3;
   --folder-1: #e56a3c;
   --folder-2: #f0a020;
   --folder-3: #94c255;
@@ -159,10 +152,27 @@ h1 {
   color: rgba(255, 255, 255, 0.9);
 }
 
-.actions {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.7rem;
+.store-cta {
+  display: grid;
+  justify-items: start;
+  gap: 0.45rem;
+}
+
+.store-badge-link {
+  display: inline-block;
+  line-height: 0;
+  padding: 0.3rem 0.3rem 0.3rem 0;
+}
+
+.store-badge {
+  height: 48px;
+  width: auto;
+}
+
+.store-caption {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.82);
+  font-size: 0.82rem;
 }
 
 .btn {
@@ -202,43 +212,6 @@ h1 {
 
 .btn-secondary:hover {
   background: var(--field);
-}
-
-.pills {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.45rem;
-  margin: 0 0 1.1rem;
-}
-
-.pill {
-  display: inline-flex;
-  align-items: center;
-  border-radius: 999px;
-  padding: 0.32rem 0.7rem;
-  font-size: 0.72rem;
-  font-weight: 750;
-  letter-spacing: 0.06em;
-}
-
-.pill-all {
-  background: var(--all-bg);
-  color: var(--all);
-}
-
-.pill-unseen {
-  background: var(--unseen-bg);
-  color: var(--unseen);
-}
-
-.pill-learning {
-  background: var(--learning-bg);
-  color: var(--learning);
-}
-
-.pill-mastered {
-  background: var(--mastered-bg);
-  color: var(--teal-deep);
 }
 
 .device {
@@ -426,6 +399,13 @@ h1 {
 
 .site-footer .dot {
   color: var(--muted);
+}
+
+.legal-note {
+  margin: 0.7rem auto 0;
+  max-width: 36rem;
+  font-size: 0.75rem;
+  line-height: 1.4;
 }
 
 @media (max-width: 860px) {
