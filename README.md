@@ -1,6 +1,6 @@
-# Octo Flashcards website
+# OCTO Flashcards website
 
-Static marketing site for the React Native Octo Flashcards app. Hosted on GitHub Pages.
+Static marketing site for the React Native OCTO Flashcards app. Hosted on GitHub Pages.
 
 Live URL after Pages is enabled: `https://elainekodama.github.io/octo-flashcards-site/`
 
