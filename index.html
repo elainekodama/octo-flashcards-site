@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Octo Flashcards</title>
+    <meta
+      name="description"
+      content="Octo Flashcards is a cross-platform study app for handwritten cards, color-coded folders, and focused review sessions."
+    />
+    <link rel="icon" href="%BASE_URL%favicon.png" type="image/png" />
+    <script type="module" src="/src/site.js"></script>
+  </head>
+  <body>
+    <header class="wrap site-header">
+      <a class="brand" href="./">
+        <img class="mark" src="%BASE_URL%logo.png" width="40" height="44" alt="" />
+        Octo Flashcards
+      </a>
+      <nav class="nav">
+        <a href="#app">The app</a>
+        <a href="./privacy/">Privacy</a>
+        <a href="./terms/">Terms</a>
+      </nav>
+    </header>
+
+    <section class="hero">
+      <div class="wrap">
+        <div>
+          <img class="hero-logo" src="%BASE_URL%logo-white.png" width="112" height="124" alt="Octo Flashcards" />
+          <p class="kicker">Write it. Flip it. Keep it.</p>
+          <h1>Flashcards with your handwriting, organized your way.</h1>
+          <p class="lede">
+            Make sets, drop them in color-coded folders, then study with a
+            simple flip and swipe. Learning and mastered stay visible so you
+            always know what to review next.
+          </p>
+          <div class="pills">
+            <span class="pill pill-all">All</span>
+            <span class="pill pill-unseen">Unseen</span>
+            <span class="pill pill-learning">Learning</span>
+            <span class="pill pill-mastered">Mastered</span>
+          </div>
+          <div class="actions">
+            <a class="btn btn-on-teal" href="#app">See the app</a>
+            <a class="btn btn-secondary" href="./privacy/">Privacy policy</a>
+          </div>
+        </div>
+        <div class="hero-visual">
+          <figure class="device">
+            <img
+              src="%BASE_URL%app/study.webp"
+              alt="Study session in Octo Flashcards, with a handwritten card and Learning and Mastered buttons"
+            />
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <main>
+      <section class="wrap section" id="app">
+        <h2>Built for real study sessions</h2>
+        <p class="section-intro">
+          The same screens you use in the app: folders for collections, a set
+          grid for cards, and a large study view for flipping and marking
+          progress.
+        </p>
+        <div class="shots">
+          <figure class="shot">
+            <img
+              src="%BASE_URL%app/folders.webp"
+              alt="All Folders screen with color-coded folder cards and a New Folder button"
+            />
+            <figcaption>Color-coded folders keep collections easy to find.</figcaption>
+          </figure>
+          <figure class="shot">
+            <img
+              src="%BASE_URL%app/set.webp"
+              alt="A flashcard set in grid view showing handwritten cards labeled Front"
+            />
+            <figcaption>Write or draw on each card — not just typed text.</figcaption>
+          </figure>
+          <figure class="shot">
+            <img
+              src="%BASE_URL%app/study.webp"
+              alt="Study view with session progress and Learning and Mastered actions"
+            />
+            <figcaption>Flip, then mark a card learning or mastered.</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section class="wrap section" id="features">
+        <h2>What you can do</h2>
+        <div class="features">
+          <article class="feature">
+            <h3>Organize in folders</h3>
+            <p>
+              Group sets by class or topic. Search collections and filter by
+              the color you assigned.
+            </p>
+            <div class="dots" aria-hidden="true">
+              <span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+            </div>
+          </article>
+          <article class="feature">
+            <h3>Study with gestures</h3>
+            <p>
+              Tap to flip. Swipe left for learning, right for mastered — or use
+              the buttons at the bottom.
+            </p>
+          </article>
+          <article class="feature">
+            <h3>Pick up on another device</h3>
+            <p>
+              Sign in once. Your folders, cards, and review status stay with
+              your account.
+            </p>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="wrap site-footer">
+      <nav>
+        <a href="./privacy/">Privacy policy</a>
+        <span class="dot">·</span>
+        <a href="./terms/">Terms and conditions</a>
+      </nav>
+      <p>© <span id="y"></span> Octo Flashcards</p>
+    </footer>
+    <script>
+      document.getElementById("y").textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>
