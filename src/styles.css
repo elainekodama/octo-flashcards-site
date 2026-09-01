@@ -1,5 +1,5 @@
 :root {
-  --teal: #2aa39c;
+  --teal: #29A39B;
   --teal-deep: #218f89;
   --teal-btn: #21a290;
   --paper: #f9fafc;
@@ -96,7 +96,7 @@ img {
 }
 
 .hero {
-  background: var(--teal);
+  background: linear-gradient(var(--teal), #69BEB9);
   color: #fff;
   padding: 3.4rem 0 3.1rem;
 }
@@ -222,7 +222,8 @@ h1 {
   background: #fff;
 }
 
-.device img {
+.device-media {
+  display: block;
   width: 100%;
 }
 
@@ -263,6 +264,36 @@ h1 {
   padding: 0.85rem 1rem 1rem;
   color: var(--muted);
   font-size: 0.92rem;
+}
+
+.shot-cycle {
+  max-width: 28rem;
+  margin: 0;
+}
+
+.shot-cycle-frames {
+  position: relative;
+}
+
+.shot-cycle-frames img {
+  width: 100%;
+  opacity: 0;
+  transition: opacity 0.45s ease;
+}
+
+.shot-cycle-frames img:first-child {
+  position: relative;
+}
+
+.shot-cycle-frames img:not(:first-child) {
+  position: absolute;
+  inset: 0;
+  height: 100%;
+  object-fit: contain;
+}
+
+.shot-cycle-frames img.is-active {
+  opacity: 1;
 }
 
 .features {
