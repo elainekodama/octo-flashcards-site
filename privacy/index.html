@@ -22,60 +22,211 @@
       <div class="legal-card">
         <p class="kicker">Legal</p>
         <h1>Privacy policy</h1>
-        <p class="muted">Last updated: August 27, 2026</p>
+        <p class="muted">Last updated: August 31, 2026</p>
         <p>
-          This policy describes how OCTO Flashcards (“the app,” “we”) handles
-          information when you use the app and this website. It is a practical
-          description for a small personal project, not legal advice.
+          This policy describes how OCTO Flashcards (“the app,” “we,” “us”)
+          handles information when you use the OCTO Flashcards app and this
+          website. It is a practical description of current product behavior,
+          not legal advice.
         </p>
 
         <h2>Who we are</h2>
         <p>
-          OCTO Flashcards is an independent study app. This site hosts product
-          information, the privacy policy, and the terms of use.
+          OCTO Flashcards is an independent study app for creating handwritten
+          or drawn flashcards, organizing them into folders and sets, and
+          reviewing them in study sessions. This website hosts product
+          information, this privacy policy, and the terms of use.
+        </p>
+        <p>
+          Questions: <a href="mailto:support@octoflashcards.com">support@octoflashcards.com</a>.
         </p>
 
         <h2>What we collect</h2>
+
+        <h3>Account data</h3>
+        <p>
+          To create and sign in to an account, we collect:
+        </p>
         <ul>
+          <li>Email address</li>
+          <li>Password, if you sign up with email (stored hashed by our auth provider; we do not see your password in plaintext)</li>
+          <li>Optional display name</li>
           <li>
-            <strong>Account data.</strong> Email address, display name, and
-            authentication secrets needed to sign in (handled by Supabase Auth).
+            If you sign in with Google or Apple: the identity token from that
+            provider, plus any name and email the provider shares with us
+            (Apple may give a private relay address instead of your personal
+            email)
           </li>
           <li>
-            <strong>Study content you create.</strong> Folders, flashcard sets,
-            handwriting or drawings on cards, and learning/mastered progress
-            stored so they can sync across your devices.
-          </li>
-          <li>
-            <strong>This website.</strong> GitHub Pages may log standard request
-            data (such as IP address and user agent) as part of hosting. We do
-            not run a separate analytics product on this site.
+            Sign-in metadata such as last sign-in time and whether your email
+            is confirmed
           </li>
         </ul>
+        <p>
+          Email sign-up requires you to confirm your address before you can
+          use the app.
+        </p>
+
+        <h3>Study content you create</h3>
+        <p>
+          We store the content needed to sync your library across devices:
+        </p>
+        <ul>
+          <li>Folder and set names, highlight colors, and archive status</li>
+          <li>
+            Flashcards, including handwritten or drawn sides (Apple Pencil /
+            PencilKit on iPad, or drawing strokes on other platforms), any
+            text you add on a card, and preview images
+          </li>
+          <li>
+            Study progress for each card (unseen, learning, or mastered, plus
+            last reviewed time)
+          </li>
+        </ul>
+        <p>
+          Cards and collections are private to your account. The app does not
+          currently offer sharing, public links, or collaboration.
+        </p>
+
+        <h3>Product analytics (app only)</h3>
+        <p>
+          The app uses <a href="https://posthog.com">PostHog</a> (US Cloud) so
+          we can understand how the product is used and fix problems. After you
+          sign in, we associate analytics with your account ID and send your
+          email and display name as person properties.
+        </p>
+        <p>Events we record include:</p>
+        <ul>
+          <li>
+            Account actions: sign in, sign up, password reset, log out, display
+            name edits, and taps on settings options
+          </li>
+          <li>
+            Collection actions: creating, editing, opening, sorting, filtering,
+            refreshing, and deleting (archiving) folders or sets, including
+            IDs, highlight color, and name length — not the name itself on
+            these events
+          </li>
+          <li>
+            Flashcard actions: creating, editing, deleting, filtering, view
+            toggles, and drawing actions such as switching or clearing a side
+            (not the drawing itself)
+          </li>
+          <li>
+            Study session activity: starting, flipping cards, marking
+            learning/mastered, and ending a session, including counts and
+            statuses
+          </li>
+          <li>
+            Screens you open, including route parameters. Edit screens put
+            folder or set names in the URL, so those titles can appear in
+            analytics
+          </li>
+          <li>
+            Device and app metadata that the PostHog SDK typically attaches
+            (such as app version and device/OS information)
+          </li>
+          <li>
+            Error messages from failed actions (for example, a failed save)
+          </li>
+        </ul>
+        <p>We do not send to PostHog:</p>
+        <ul>
+          <li>Passwords or authentication tokens</li>
+          <li>Handwriting, drawings, or card preview images</li>
+          <li>Search query text (only that a search ended or was cleared, and the query length)</li>
+        </ul>
+        <p>
+          Email and password fields are marked so they are excluded from
+          PostHog capture. Signing out resets the analytics identity on that
+          device.
+        </p>
+        <p>
+          This marketing site does not run PostHog or another analytics
+          product.
+        </p>
+
+        <h3>On your device</h3>
+        <p>
+          The app keeps some data locally so it can stay signed in and recover
+          work in progress, including session tokens, in-progress card drafts,
+          and editor preferences such as pen color.
+        </p>
+
+        <h3>This website</h3>
+        <p>
+          The site is hosted on GitHub Pages, which may log standard request
+          data such as IP address, browser type, and pages requested as part
+          of hosting.
+        </p>
 
         <h2>How we use it</h2>
-        <p>
-          We use this information to operate the app: create and secure your
-          account and save your cards. We do not sell your personal information.
-        </p>
+        <p>We use this information to:</p>
+        <ul>
+          <li>Create and secure your account, including email verification and password reset</li>
+          <li>Store, sync, and display your folders, sets, cards, and study progress</li>
+          <li>Understand product usage and improve the app</li>
+          <li>Respond if you email support</li>
+        </ul>
+        <p>We do not sell your personal information. We do not show ads in the app.</p>
 
-        <h2>Processors</h2>
+        <h2>Who processes it</h2>
         <p>
-          Account and database hosting is provided by
-          <a href="https://supabase.com">Supabase</a>. This marketing site is
-          hosted on GitHub Pages.
+          We use other companies to run the service. They process data on our
+          behalf according to their own policies:
         </p>
+        <ul>
+          <li>
+            <a href="https://supabase.com">Supabase</a> — accounts,
+            database, and private file storage for card drawings and previews
+          </li>
+          <li>
+            <a href="https://posthog.com">PostHog</a> — product analytics
+            (US Cloud)
+          </li>
+          <li>
+            <a href="https://policies.google.com/privacy">Google</a> — if you
+            choose Sign in with Google
+          </li>
+          <li>
+            <a href="https://www.apple.com/legal/privacy/">Apple</a> — if you
+            choose Sign in with Apple, and as the App Store distributor
+          </li>
+          <li>GitHub Pages — hosting this website</li>
+        </ul>
 
         <h2>Retention and deletion</h2>
         <p>
-          We keep account and flashcard data while your account exists. You can
-          delete your account from Settings in the app.
+          We keep account and flashcard data while your account exists.
+          Signing out clears the local session; it does not delete your
+          library on our servers.
         </p>
+        <p>
+          Deleting a folder or set in the app currently archives it rather
+          than permanently erasing it. Deleting an individual flashcard
+          removes it from your library.
+        </p>
+        <p>
+          You can delete your account from Settings. That permanently
+          deletes your user account (email, sign-in credentials, and display
+          name). You will not be able to sign back in to that account. Your
+          folders and sets are archived rather than permanently erased, along
+          with the flashcards in them — the same archive behavior as deleting
+          a folder or set while signed in. If you cannot use the app, email
+          <a href="mailto:support@octoflashcards.com">support@octoflashcards.com</a>
+          from the address on the account and we will delete the account the
+          same way. Analytics records already sent to PostHog may remain
+          until those systems’ normal retention cycles complete.
+        </p>
+        <p>There is currently no in-app export of your data.</p>
 
         <h2>Children</h2>
         <p>
-          The app is not directed at children under 13, and we do not knowingly
-          collect personal information from them.
+          The app is not directed at children under 13, and we do not
+          knowingly collect personal information from them. If you believe a
+          child under 13 has created an account, contact
+          <a href="mailto:support@octoflashcards.com">support@octoflashcards.com</a>
+          and we will delete it.
         </p>
 
         <h2>Changes</h2>
