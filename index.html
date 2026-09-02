@@ -3,11 +3,17 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>OCTO Flashcards</title>
+    <title>OCTO Flashcards — Handwritten flashcards for iPad</title>
     <meta
       name="description"
-      content="OCTO Flashcards is a cross-platform study app for handwritten cards, color-coded folders, and focused review sessions."
+      content="OCTO Flashcards is an iPad study app for handwritten flashcards. Write or draw cards with Apple Pencil, organize them into color-coded folders, and review them in focused study sessions."
     />
+    <meta property="og:title" content="OCTO Flashcards" />
+    <meta
+      property="og:description"
+      content="Handwritten flashcards for iPad. Write or draw with Apple Pencil, organize with color-coded folders, and study until it sticks."
+    />
+    <meta property="og:type" content="website" />
     <link rel="icon" href="%BASE_URL%favicon.png" type="image/png" />
     <script type="module" src="/src/site.js"></script>
   </head>
@@ -18,6 +24,7 @@
         OCTO Flashcards
       </a>
       <nav class="nav">
+        <a href="#how-it-works">How it works</a>
         <a href="./privacy/">Privacy</a>
         <a href="./terms/">Terms</a>
       </nav>
@@ -25,12 +32,13 @@
 
     <section class="hero">
       <div class="wrap">
-        <div>
-          <img class="hero-logo" src="%BASE_URL%logo-white.png" width="112" height="124" alt="OCTO Flashcards" />
+        <div class="hero-copy">
+          <img class="hero-logo" src="%BASE_URL%logo-white.png" width="112" height="124" alt="" />
           <p class="kicker">Create, Learn, Master</p>
           <h1>Traditional flashcards, modernized.</h1>
           <p class="lede">
-            Utilize your Apple Pencil to write or draw anything you need to memorize- no more constraints from text-only flashcards.
+            Write or draw your cards with Apple Pencil, sort them into color-coded folders, and
+            study them until they stick — no more text-only flashcards.
           </p>
           <div class="store-cta">
             <a
@@ -45,32 +53,180 @@
                 height="48"
               />
             </a>
-            <p class="store-caption">Compatible with iPad 17.5+</p>
+            <p class="store-caption">Made for iPad · Requires iPadOS 17.5 or later</p>
           </div>
+        </div>
+        <div class="hero-visual">
+          <img
+            class="device-shot"
+            src="%BASE_URL%app/create-card.png"
+            width="1020"
+            height="1380"
+            alt="OCTO Flashcards card editor on iPad: a handwritten kanji on the front, “Learn, Study” written on the back, and the Apple Pencil tool palette"
+            fetchpriority="high"
+          />
         </div>
       </div>
     </section>
 
     <main>
-      <section class="wrap section" id="app">
-        <h2>Study Effectively</h2>
-        <p class="section-intro">
-          Memorization starts when you create your flashcards, and solidifies when you review them.
-        </p>
+      <section class="wrap section" id="how-it-works">
+        <div class="section-head">
+          <p class="kicker">How it works</p>
+          <h2>Create, organize, study.</h2>
+          <p class="section-intro">
+            Memorization starts when you make the card and sets in when you review it. OCTO keeps
+            both steps simple.
+          </p>
+        </div>
+
+        <ol class="steps">
+          <li class="step">
+            <div class="step-copy">
+              <span class="step-num">1</span>
+              <h3>Write it the way you’d remember it</h3>
+              <p>
+                Every card has a front and a back, and both are a blank canvas. Sketch a diagram,
+                write out vocabulary, or scribble a formula with your Apple Pencil — anything you
+                can draw, you can study.
+              </p>
+            </div>
+            <figure class="step-visual">
+              <div class="detail" aria-hidden="true">
+                <img src="%BASE_URL%app/create-card.png" alt="" width="1020" height="1380" />
+              </div>
+              <figcaption>The card editor, with a full pen and marker palette.</figcaption>
+            </figure>
+          </li>
+
+          <li class="step">
+            <div class="step-copy">
+              <span class="step-num">2</span>
+              <h3>Keep every subject in its place</h3>
+              <p>
+                Group sets into folders and give each one a color. When it’s time to cram, tap a
+                color to filter down to just that subject.
+              </p>
+            </div>
+            <figure class="step-visual">
+              <div class="shot-cycle" data-cycle-interval="2600">
+                <img
+                  class="device-shot is-active"
+                  src="%BASE_URL%app/all-group.png"
+                  width="1020"
+                  height="1380"
+                  alt="All Folders screen with color-coded folder cards for Cellular Biology, Spanish, General Chemistry, and more"
+                />
+                <img
+                  class="device-shot"
+                  src="%BASE_URL%app/orange-group.png"
+                  width="1020"
+                  height="1380"
+                  alt="Folders filtered to orange: Spanish and French"
+                  loading="lazy"
+                />
+                <img
+                  class="device-shot"
+                  src="%BASE_URL%app/green-group.png"
+                  width="1020"
+                  height="1380"
+                  alt="Folders filtered to green"
+                  loading="lazy"
+                />
+                <img
+                  class="device-shot"
+                  src="%BASE_URL%app/blue-group.png"
+                  width="1020"
+                  height="1380"
+                  alt="Folders filtered to blue"
+                  loading="lazy"
+                />
+              </div>
+              <figcaption>Filter folders by color with a single tap.</figcaption>
+            </figure>
+          </li>
+
+          <li class="step">
+            <div class="step-copy">
+              <span class="step-num">3</span>
+              <h3>Flip, sort, repeat</h3>
+              <p>
+                Run through a set one card at a time. Tap to flip, then mark each card
+                <strong>Learning</strong> or <strong>Mastered</strong> so your next session
+                focuses on what you still need to work on.
+              </p>
+            </div>
+            <figure class="step-visual">
+              <div class="video-frame">
+                <video
+                  poster="%BASE_URL%app/study-flip-poster.png"
+                  width="756"
+                  height="1024"
+                  autoplay
+                  muted
+                  loop
+                  playsinline
+                  preload="metadata"
+                  aria-label="A study session in OCTO Flashcards: a handwritten card flips from front to back"
+                >
+                  <source src="%BASE_URL%app/study-flip.webm" type="video/webm" />
+                  <source src="%BASE_URL%app/study-flip.mp4" type="video/mp4" />
+                </video>
+              </div>
+              <figcaption>Tap a card to flip it during a study session.</figcaption>
+            </figure>
+          </li>
+        </ol>
       </section>
 
-      <section class="wrap section" id="app">
-        <h2>Stay Organized</h2>
-        <p class="section-intro">
-          Group sets together by folders, color-coding, or both!
-        </p>
+      <section class="wrap section section-tight" id="why">
+        <div class="features">
+          <div class="feature">
+            <h3>Made for Apple Pencil</h3>
+            <p>
+              Handwriting, sketches, diagrams, characters. If you can draw it, you can put it on a
+              card.
+            </p>
+          </div>
+          <div class="feature">
+            <h3>Color-coded folders</h3>
+            <p>Tag folders and sets with a color so subjects stay apart at a glance.</p>
+            <div class="dots" aria-hidden="true">
+              <span></span><span></span><span></span><span></span><span></span><span></span
+              ><span></span>
+            </div>
+          </div>
+          <div class="feature">
+            <h3>Go paperless</h3>
+            <p>
+              Unlimited cards, nothing to lose or throw away. Your library is saved to your
+              account.
+            </p>
+          </div>
+        </div>
       </section>
 
-      <section class="wrap section" id="app">
-        <h2>Go Paperless</h2>
-        <p class="section-intro">
-          Create unlimited cards without contributing to paper waste.
-        </p>
+      <section class="wrap section">
+        <div class="cta-band">
+          <img class="cta-logo" src="%BASE_URL%logo-white.png" width="56" height="62" alt="" />
+          <h2>Ready to study?</h2>
+          <p>OCTO Flashcards is free on the App Store for iPad.</p>
+          <div class="store-cta store-cta-center">
+            <a
+              class="store-badge-link"
+              href="https://apps.apple.com/us/app/octo-flashcards/id1664003220"
+            >
+              <img
+                class="store-badge"
+                src="%BASE_URL%badges/download-on-the-app-store.svg"
+                alt="Download on the App Store"
+                width="144"
+                height="48"
+              />
+            </a>
+            <p class="store-caption">Requires iPadOS 17.5 or later</p>
+          </div>
+        </div>
       </section>
     </main>
 
@@ -79,14 +235,13 @@
         <a href="./privacy/">Privacy Policy</a>
         <span class="dot">·</span>
         <a href="./terms/">Terms and Conditions</a>
+        <span class="dot">·</span>
+        <a href="mailto:support@octoflashcards.com">Support</a>
       </nav>
-      <p>© <span id="y"></span> OCTO Flashcards</p>
+      <p>© <span data-year></span> OCTO Flashcards</p>
       <p class="legal-note">
-        Apple, the Apple logo, and App Store are trademarks of Apple Inc.
+        Apple, the Apple logo, Apple Pencil, iPad, and App Store are trademarks of Apple Inc.
       </p>
     </footer>
-    <script>
-      document.getElementById("y").textContent = new Date().getFullYear();
-    </script>
   </body>
 </html>
