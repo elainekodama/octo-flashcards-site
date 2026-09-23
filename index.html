@@ -52,25 +52,164 @@
     </section>
 
     <main>
-      <section class="wrap section" id="app">
-        <h2>Study Effectively</h2>
-        <p class="section-intro">
-          Memorization starts when you create your flashcards, and solidifies when you review them.
-        </p>
+      <section class="wrap section feature-row" id="study">
+        <div class="feature-copy">
+          <h2>Study Effectively</h2>
+          <p class="section-intro">
+            Memorization starts when you create your flashcards, and solidifies when you review them.
+          </p>
+        </div>
+        <figure class="app-frame" aria-label="Animated study session: a tap icon presses the card, then it flips">
+          <div class="app-demo demo-study" aria-hidden="true">
+            <div class="demo-top">
+              <span class="demo-title">Photosynthesis</span>
+              <span class="demo-pills">
+                <span class="pill pill-learning">Learning</span>
+                <span class="pill pill-mastered">Mastered</span>
+              </span>
+            </div>
+            <p class="demo-hint">Tap to flip</p>
+            <div class="flip-stage">
+              <div class="flip-card">
+                <div class="flip-face flip-front">
+                  <svg class="ink" viewBox="0 0 220 70" aria-hidden="true">
+                    <path
+                      d="M8 48c12-28 28-32 40-8 8 16 10 22 10 22M68 22c2 28 4 36 18 36 16 0 22-18 20-36M122 50c18-4 28-22 20-34-8-10-24-2-22 14 2 14 18 18 34 10M176 20c-2 22 2 36 16 36 18 0 22-20 18-36"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="4"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                  <span class="face-tag">Front</span>
+                </div>
+                <div class="flip-face flip-back">
+                  <p>Process plants use to turn light into sugar.</p>
+                  <span class="face-tag">Back</span>
+                </div>
+              </div>
+              <div class="tap-pointer">
+                <span class="tap-ripple"></span>
+                <svg class="tap-finger" viewBox="0 0 48 64" aria-hidden="true">
+                  <path
+                    fill="#1a2332"
+                    stroke="#fff"
+                    stroke-width="2.5"
+                    stroke-linejoin="round"
+                    d="M20.2 2.8c2.2 0 3.9 1.8 3.9 4v18.2l1.1-.6c2.4-1.3 5.4-.4 6.6 2.1 1 2.1.5 4.5-1.1 6.1l-8.4 8.6c2 .4 3.8 1.4 5.1 2.9 3.4 3.8 3.1 9.6-.7 13.1-3.6 3.3-9 3.4-12.7.4L4.8 49.1C2 46.6.8 42.8 1.6 39.2L6.8 16c.6-2.6 3.2-4.2 5.8-3.6.9.2 1.6.7 2.2 1.3V6.8c0-2.2 1.8-4 4-4z"
+                  />
+                </svg>
+              </div>
+            </div>
+            <div class="demo-actions">
+              <span class="demo-btn">Learning</span>
+              <span class="demo-btn demo-btn-teal">Mastered</span>
+            </div>
+          </div>
+        </figure>
       </section>
 
-      <section class="wrap section" id="app">
-        <h2>Stay Organized</h2>
-        <p class="section-intro">
-          Group sets together by folders, color-coding, or both!
-        </p>
+      <section class="wrap section feature-row feature-row-reverse" id="organize">
+        <div class="feature-copy">
+          <h2>Stay Organized</h2>
+          <p class="section-intro">
+            Group sets together by folders, color-coding, or both!
+          </p>
+        </div>
+        <figure class="app-frame" aria-label="Animated folders: color filters highlight matching folders">
+          <div class="app-demo demo-folders" aria-hidden="true">
+            <div class="demo-top">
+              <span class="demo-title">All folders</span>
+              <span class="demo-dots" role="presentation">
+                <span></span><span></span><span></span><span></span><span></span><span></span>
+              </span>
+            </div>
+            <div class="folder-grid">
+              <article class="folder-tile" style="--tab: var(--folder-1)">
+                <span>Biology</span>
+                <small>12 sets</small>
+              </article>
+              <article class="folder-tile" style="--tab: var(--folder-2)">
+                <span>Chemistry</span>
+                <small>8 sets</small>
+              </article>
+              <article class="folder-tile" style="--tab: var(--folder-4)">
+                <span>Spanish</span>
+                <small>5 sets</small>
+              </article>
+              <article class="folder-tile" style="--tab: var(--folder-5)">
+                <span>History</span>
+                <small>3 sets</small>
+              </article>
+              <article class="folder-tile" style="--tab: var(--folder-6)">
+                <span>Music</span>
+                <small>6 sets</small>
+              </article>
+              <article class="folder-tile" style="--tab: var(--folder-7)">
+                <span>Art</span>
+                <small>4 sets</small>
+              </article>
+            </div>
+          </div>
+        </figure>
       </section>
 
-      <section class="wrap section" id="app">
-        <h2>Go Paperless</h2>
-        <p class="section-intro">
-          Create unlimited cards without contributing to paper waste.
-        </p>
+      <section class="wrap section feature-row" id="paperless">
+        <div class="feature-copy">
+          <h2>Go Paperless</h2>
+          <p class="section-intro">
+            Create unlimited cards without contributing to paper waste.
+          </p>
+        </div>
+        <figure class="app-frame" aria-label="Animated card grid: handwritten cards appear one by one">
+          <div class="app-demo demo-cards" aria-hidden="true">
+            <div class="demo-top">
+              <span class="demo-title">First set</span>
+              <span class="demo-add">+ Add cards</span>
+            </div>
+            <div class="hand-grid">
+              <article class="hand-card">
+                <svg viewBox="0 0 80 40" aria-hidden="true">
+                  <path
+                    d="M8 28c10-18 22-18 28 0M42 12c2 16 6 22 16 20 12-2 16-16 12-22"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="3"
+                    stroke-linecap="round"
+                  />
+                </svg>
+              </article>
+              <article class="hand-card">
+                <svg viewBox="0 0 80 40" aria-hidden="true">
+                  <path
+                    d="M10 30c18-22 36-4 50-16"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="3"
+                    stroke-linecap="round"
+                  />
+                </svg>
+              </article>
+              <article class="hand-card">
+                <svg viewBox="0 0 80 40" aria-hidden="true">
+                  <circle cx="40" cy="20" r="12" fill="none" stroke="currentColor" stroke-width="3" />
+                </svg>
+              </article>
+              <article class="hand-card">
+                <svg viewBox="0 0 80 40" aria-hidden="true">
+                  <path
+                    d="M14 12v18M14 12c14-2 22 8 10 14 14 0 22 10 8 16"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="3"
+                    stroke-linecap="round"
+                  />
+                </svg>
+              </article>
+            </div>
+          </div>
+        </figure>
       </section>
     </main>
 
