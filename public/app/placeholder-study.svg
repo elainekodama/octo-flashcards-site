@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="720" viewBox="0 0 960 720" role="img" aria-label="Placeholder for a study session screenshot">
+  <rect width="960" height="720" fill="#eef4f4"/>
+  <rect x="48" y="40" width="864" height="640" rx="28" fill="#fff"/>
+  <rect x="80" y="72" width="160" height="14" rx="7" fill="#d5dce3"/>
+  <rect x="80" y="108" width="280" height="8" rx="4" fill="#e6e8ee"/>
+  <rect x="200" y="200" width="560" height="320" rx="24" fill="#f7f8fb" stroke="#e6e8ee"/>
+  <text x="480" y="350" text-anchor="middle" fill="#2aa39c" font-family="system-ui, sans-serif" font-size="28" font-weight="700">Study session</text>
+  <text x="480" y="390" text-anchor="middle" fill="#6b7380" font-family="system-ui, sans-serif" font-size="16">Replace with an iPad screenshot</text>
+  <rect x="200" y="560" width="250" height="48" rx="24" fill="#eef4f4"/>
+  <rect x="510" y="560" width="250" height="48" rx="24" fill="#2aa39c"/>
+</svg>
