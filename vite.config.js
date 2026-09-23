@@ -5,7 +5,9 @@ import { defineConfig } from "vite";
 const root = dirname(fileURLToPath(import.meta.url));
 
 export default defineConfig({
-  base: process.env.VITE_BASE ?? "/octo-flashcards-site/",
+  // Custom domain (octoflashcards.com) serves the site at /. Override with
+  // VITE_BASE=/octo-flashcards-site/ for project-page previews.
+  base: process.env.VITE_BASE ?? "/",
   build: {
     rollupOptions: {
       input: {
