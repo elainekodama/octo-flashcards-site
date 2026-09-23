@@ -2,7 +2,7 @@
 
 Static marketing site for the React Native OCTO Flashcards app. Hosted on GitHub Pages.
 
-Live URL after Pages is enabled: `https://elainekodama.github.io/octo-flashcards-site/`
+Live site: `https://www.octoflashcards.com/`
 
 This is not a Next.js or React SPA. Vite builds ordinary HTML so store listings can link to stable privacy and terms URLs.
 
@@ -21,14 +21,14 @@ npm install
 npm run dev
 ```
 
-`npm run dev` serves at `/` so you can open `http://localhost:5173/`. Production builds use the GitHub Pages base path `/octo-flashcards-site/`.
+`npm run dev` and production builds both serve at `/` for the custom domain.
 
 ## GitHub Pages
 
 1. Repo **Settings → Pages → Source: GitHub Actions**.
 2. Merge to `main`. The workflow in `.github/workflows/pages.yml` builds and deploys.
 
-Custom domain later: set `VITE_BASE=/` in the workflow `env` and add a `CNAME` in `public/`.
+The custom domain is `www.octoflashcards.com` (`public/CNAME`). The Pages workflow sets `VITE_BASE=/` so images, CSS, and JS resolve at the domain root instead of `/octo-flashcards-site/`.
 
 ## Legal copy
 
