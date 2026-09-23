@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="720" viewBox="0 0 960 720" role="img" aria-label="Placeholder for a handwritten cards screenshot">
+  <rect width="960" height="720" fill="#eef4f4"/>
+  <rect x="48" y="40" width="864" height="640" rx="28" fill="#fff"/>
+  <rect x="80" y="72" width="150" height="14" rx="7" fill="#d5dce3"/>
+  <rect x="80" y="168" width="380" height="200" rx="22" fill="#f7f8fb" stroke="#e6e8ee"/>
+  <path d="M160 250c20-28 48-20 70 0s48 24 72-8" fill="none" stroke="#1a2332" stroke-width="4" stroke-linecap="round"/>
+  <rect x="500" y="168" width="380" height="200" rx="22" fill="#f7f8fb" stroke="#e6e8ee"/>
+  <path d="M580 268c28-36 70-10 90 8s52 6 80-20" fill="none" stroke="#1a2332" stroke-width="4" stroke-linecap="round"/>
+  <rect x="80" y="396" width="380" height="200" rx="22" fill="#f7f8fb" stroke="#e6e8ee"/>
+  <circle cx="270" cy="496" r="28" fill="none" stroke="#2aa39c" stroke-width="4"/>
+  <rect x="500" y="396" width="380" height="200" rx="22" fill="#f7f8fb" stroke="#e6e8ee"/>
+  <text x="480" y="640" text-anchor="middle" fill="#2aa39c" font-family="system-ui, sans-serif" font-size="22" font-weight="700">Handwritten cards</text>
+  <text x="690" y="500" text-anchor="middle" fill="#6b7380" font-family="system-ui, sans-serif" font-size="16">Replace with an iPad screenshot</text>
+</svg>
