@@ -1,8 +1,11 @@
 :root {
-  --teal: #2aa39c;
+  --teal: #29a39b;
   --teal-deep: #218f89;
   --teal-btn: #21a290;
-  --paper: #f9fafc;
+  --teal-soft: #e4f4f2;
+  --teal-light: #6bc0b9;
+  /* Matches the baked-in background of the study-flip video so it sits flush on the page. */
+  --paper: #f8f9fb;
   --card: #ffffff;
   --ink: #1a2332;
   --muted: #6b7380;
@@ -16,6 +19,7 @@
   --folder-6: #7b86d4;
   --folder-7: #e07ab5;
   --shadow: 0 10px 28px rgba(26, 35, 50, 0.08);
+  --shadow-lg: 0 28px 60px rgba(26, 35, 50, 0.18);
   --radius: 1.15rem;
   --max: 68rem;
 }
@@ -38,14 +42,16 @@ body {
     "Segoe UI",
     system-ui,
     sans-serif;
-  line-height: 1.5;
+  line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
 }
 
 a {
   color: var(--teal-deep);
 }
 
-img {
+img,
+video {
   max-width: 100%;
   display: block;
 }
@@ -54,6 +60,8 @@ img {
   width: min(var(--max), calc(100% - 2.5rem));
   margin-inline: auto;
 }
+
+/* Header ---------------------------------------------------------------- */
 
 .site-header {
   display: flex;
@@ -81,7 +89,7 @@ img {
 
 .nav {
   display: flex;
-  gap: 1.15rem;
+  gap: 1.25rem;
   font-size: 0.95rem;
 }
 
@@ -95,25 +103,7 @@ img {
   color: var(--ink);
 }
 
-.hero {
-  background: var(--teal);
-  color: #fff;
-  padding: 3.4rem 0 3.1rem;
-}
-
-.hero .wrap {
-  display: grid;
-  grid-template-columns: 1.05fr 0.95fr;
-  gap: 2.4rem;
-  align-items: center;
-}
-
-.hero-logo {
-  width: 6.6rem;
-  height: 7.3rem;
-  margin-bottom: 1rem;
-  object-fit: contain;
-}
+/* Type ------------------------------------------------------------------ */
 
 .kicker {
   margin: 0 0 0.55rem;
@@ -122,10 +112,6 @@ img {
   font-weight: 700;
   letter-spacing: 0.14em;
   text-transform: uppercase;
-}
-
-.hero .kicker {
-  color: rgba(255, 255, 255, 0.82);
 }
 
 h1,
@@ -142,14 +128,61 @@ h1 {
 }
 
 .lede {
-  margin: 0 0 1.4rem;
-  max-width: 36rem;
+  margin: 0 0 1.6rem;
+  max-width: 34rem;
   color: var(--muted);
   font-size: 1.08rem;
 }
 
+/* Hero ------------------------------------------------------------------ */
+
+.hero {
+  position: relative;
+  color: #fff;
+  padding: 3.6rem 0 0;
+  background:
+    radial-gradient(60rem 30rem at 85% -10%, rgba(255, 255, 255, 0.18), transparent 70%),
+    linear-gradient(135deg, var(--teal-deep) 0%, var(--teal) 55%, var(--teal-light) 100%);
+}
+
+.hero .wrap {
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  gap: 2.4rem;
+  align-items: center;
+}
+
+.hero-copy {
+  padding-bottom: 3.6rem;
+}
+
+.hero-logo {
+  width: 5.4rem;
+  height: 6rem;
+  margin-bottom: 1.1rem;
+  object-fit: contain;
+}
+
+.hero .kicker {
+  color: rgba(255, 255, 255, 0.82);
+}
+
 .hero .lede {
-  color: rgba(255, 255, 255, 0.9);
+  color: rgba(255, 255, 255, 0.92);
+}
+
+.hero-visual {
+  align-self: end;
+  justify-self: center;
+  width: min(100%, 23rem);
+  /* Let the iPad hang over the edge of the teal band into the next section. */
+  margin-bottom: -4.5rem;
+}
+
+.hero-visual .device-shot {
+  width: 100%;
+  height: auto;
+  filter: drop-shadow(0 30px 40px rgba(14, 60, 58, 0.35));
 }
 
 .store-cta {
@@ -158,10 +191,19 @@ h1 {
   gap: 0.45rem;
 }
 
+.store-cta-center {
+  justify-items: center;
+}
+
 .store-badge-link {
   display: inline-block;
   line-height: 0;
   padding: 0.3rem 0.3rem 0.3rem 0;
+  transition: transform 0.15s ease;
+}
+
+.store-badge-link:hover {
+  transform: translateY(-1px);
 }
 
 .store-badge {
@@ -174,6 +216,8 @@ h1 {
   color: rgba(255, 255, 255, 0.82);
   font-size: 0.82rem;
 }
+
+/* Buttons --------------------------------------------------------------- */
 
 .btn {
   display: inline-flex;
@@ -195,76 +239,190 @@ h1 {
   background: var(--teal-deep);
 }
 
-.btn-on-teal {
-  background: #fff;
-  color: var(--teal-deep);
-}
-
-.btn-on-teal:hover {
-  background: #eef8f7;
-}
-
-.btn-secondary {
-  background: #fff;
-  border-color: var(--line);
-  color: var(--ink);
-}
-
-.btn-secondary:hover {
-  background: var(--field);
-}
-
-.device {
-  border-radius: 1.4rem;
-  overflow: hidden;
-  box-shadow: var(--shadow);
-  border: 1px solid rgba(255, 255, 255, 0.25);
-  background: #fff;
-}
-
-.device-media {
-  display: block;
-  width: 100%;
-}
+/* Sections -------------------------------------------------------------- */
 
 .section {
-  padding: 3rem 0;
+  padding: 3.5rem 0;
+}
+
+.section-tight {
+  padding-top: 0;
+}
+
+#how-it-works {
+  padding-top: 7.5rem;
+  scroll-margin-top: 1rem;
 }
 
 .section h2 {
-  margin: 0 0 0.4rem;
-  font-size: 1.65rem;
+  margin: 0 0 0.5rem;
+  font-size: clamp(1.7rem, 3.2vw, 2.2rem);
 }
 
-.section-intro {
-  margin: 0 0 1.4rem;
-  color: var(--muted);
+.section-head {
+  text-align: center;
+  margin: 0 auto 3rem;
   max-width: 38rem;
 }
 
-.shots {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1rem;
+.section-intro {
+  margin: 0;
+  color: var(--muted);
+  font-size: 1.05rem;
 }
 
-.shot {
-  background: var(--card);
-  border: 1px solid var(--line);
-  border-radius: var(--radius);
+/* Steps ----------------------------------------------------------------- */
+
+.steps {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 4.5rem;
+}
+
+.step {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: center;
+}
+
+.step:nth-child(even) .step-copy {
+  order: 2;
+}
+
+.step-copy {
+  max-width: 28rem;
+}
+
+.step:nth-child(odd) .step-copy {
+  justify-self: end;
+}
+
+.step-num {
+  display: inline-grid;
+  place-items: center;
+  width: 2.1rem;
+  height: 2.1rem;
+  border-radius: 50%;
+  background: var(--teal-soft);
+  color: var(--teal-deep);
+  font-weight: 750;
+  font-size: 0.95rem;
+  margin-bottom: 0.9rem;
+}
+
+.step h3 {
+  margin: 0 0 0.6rem;
+  font-size: 1.45rem;
+}
+
+.step p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 1.02rem;
+}
+
+.step p strong {
+  color: var(--ink);
+  font-weight: 650;
+}
+
+.step-visual {
+  margin: 0;
+  width: min(100%, 20rem);
+  justify-self: center;
+  container-type: inline-size;
+}
+
+.step-visual figcaption {
+  margin-top: 0.9rem;
+  text-align: center;
+  color: var(--muted);
+  font-size: 0.88rem;
+}
+
+.device-shot {
+  width: 100%;
+  height: auto;
+}
+
+.step-visual .device-shot {
+  filter: drop-shadow(0 18px 30px rgba(26, 35, 50, 0.16));
+}
+
+/*
+ * The study clip has a flat light background baked in. Crop it to the iPad's outline
+ * (device spans x 31–726 / y 30–991 of the 756×1024 frame, ~63px corner radius) so it
+ * reads as a floating device like the transparent PNG shots.
+ */
+.video-frame {
+  position: relative;
   overflow: hidden;
+  aspect-ratio: 696 / 962;
+  border-radius: 1.8rem;
+  border-radius: 9.05cqw;
+  background: #f8f9fb;
+  box-shadow: 0 18px 30px rgba(26, 35, 50, 0.16);
+}
+
+.video-frame video {
+  position: absolute;
+  top: -3.12%;
+  left: -4.45%;
+  width: 108.62%;
+  max-width: none;
+  height: auto;
+}
+
+/* Zoomed crop of the card editor so the hero shot isn't simply repeated. */
+.detail {
+  position: relative;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  border-radius: var(--radius);
+  border: 1px solid var(--line);
+  background: #f3f4f7;
   box-shadow: var(--shadow);
 }
 
-.shot img {
-  width: 100%;
+.detail img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 134.2%;
+  max-width: none;
+  height: auto;
+  transform: translate(-12.75%, -50.7%);
 }
 
-.shot figcaption {
-  padding: 0.85rem 1rem 1rem;
-  color: var(--muted);
-  font-size: 0.92rem;
+/* Cross-fading screenshot cycle. */
+.shot-cycle {
+  position: relative;
 }
+
+.shot-cycle img {
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.shot-cycle img:first-child {
+  position: relative;
+}
+
+.shot-cycle img:not(:first-child) {
+  position: absolute;
+  inset: 0;
+  height: 100%;
+  object-fit: contain;
+}
+
+.shot-cycle img.is-active {
+  opacity: 1;
+}
+
+/* Feature cards --------------------------------------------------------- */
 
 .features {
   display: grid;
@@ -277,7 +435,7 @@ h1 {
   background: var(--card);
   border: 1px solid var(--line);
   border-radius: var(--radius);
-  padding: 1.35rem 1.2rem 1.2rem;
+  padding: 1.5rem 1.3rem 1.3rem;
   box-shadow: var(--shadow);
   overflow: hidden;
 }
@@ -286,7 +444,7 @@ h1 {
   content: "";
   position: absolute;
   top: 0;
-  left: 1.1rem;
+  left: 1.2rem;
   width: 2.4rem;
   height: 0.42rem;
   border-radius: 0 0 0.4rem 0.4rem;
@@ -305,19 +463,20 @@ h1 {
 }
 
 .feature h3 {
-  margin: 0.35rem 0 0.4rem;
-  font-size: 1.15rem;
+  margin: 0.35rem 0 0.45rem;
+  font-size: 1.12rem;
 }
 
 .feature p {
   margin: 0;
   color: var(--muted);
+  font-size: 0.97rem;
 }
 
 .dots {
   display: flex;
   gap: 0.4rem;
-  margin: 0.85rem 0 0;
+  margin: 0.95rem 0 0;
 }
 
 .dots span {
@@ -347,6 +506,43 @@ h1 {
 .dots span:nth-child(7) {
   background: var(--folder-7);
 }
+
+/* Closing CTA ----------------------------------------------------------- */
+
+.cta-band {
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+  color: #fff;
+  padding: 3rem 1.5rem 2.8rem;
+  border-radius: 1.6rem;
+  background:
+    radial-gradient(40rem 20rem at 10% 110%, rgba(255, 255, 255, 0.16), transparent 70%),
+    linear-gradient(135deg, var(--teal-deep) 0%, var(--teal) 60%, var(--teal-light) 100%);
+  box-shadow: var(--shadow);
+}
+
+.cta-logo {
+  width: 3.5rem;
+  height: 3.9rem;
+  margin: 0 auto 0.8rem;
+  object-fit: contain;
+}
+
+.cta-band h2 {
+  margin: 0 0 0.3rem;
+}
+
+.cta-band p {
+  margin: 0 0 1.4rem;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.cta-band .store-caption {
+  margin: 0;
+}
+
+/* Legal pages ----------------------------------------------------------- */
 
 .legal {
   padding: 1.2rem 0 4rem;
@@ -397,6 +593,8 @@ h1 {
   font-size: 0.92rem;
 }
 
+/* Footer ---------------------------------------------------------------- */
+
 .site-footer {
   padding: 1.5rem 0 2.2rem;
   color: var(--muted);
@@ -406,6 +604,7 @@ h1 {
 
 .site-footer nav {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   gap: 0.45rem;
   margin-bottom: 0.45rem;
@@ -428,19 +627,60 @@ h1 {
   line-height: 1.4;
 }
 
+/* Responsive ------------------------------------------------------------ */
+
 @media (max-width: 860px) {
+  .hero {
+    padding-top: 2.4rem;
+  }
+
   .hero .wrap,
-  .shots,
+  .step,
   .features {
     grid-template-columns: 1fr;
   }
 
-  .hero {
-    padding-top: 2.2rem;
+  .hero-copy {
+    padding-bottom: 2.2rem;
   }
 
   .hero-visual {
-    max-width: 22rem;
-    margin-inline: auto;
+    width: min(100%, 19rem);
+    margin-bottom: -3.5rem;
+  }
+
+  #how-it-works {
+    padding-top: 6rem;
+  }
+
+  .steps {
+    gap: 3.5rem;
+  }
+
+  .step {
+    gap: 1.6rem;
+  }
+
+  .step:nth-child(even) .step-copy {
+    order: 0;
+  }
+
+  .step:nth-child(odd) .step-copy {
+    justify-self: start;
+  }
+
+  .step-visual {
+    width: min(100%, 17rem);
+  }
+}
+
+@media (max-width: 480px) {
+  .nav {
+    gap: 0.9rem;
+    font-size: 0.9rem;
+  }
+
+  .nav a:first-child {
+    display: none;
   }
 }
